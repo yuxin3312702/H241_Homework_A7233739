@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        /* 設定導覽列的背景顏色(粉紅色) */
+        .navbar {
+            background-color: pink !important;
+        }
+            /* 設定導覽列的標題文字之顏色(綠色)及大小(22px) */
+            .navbar .navbar-brand {
+                color: green !important;
+                font-size: 22px;
+                font-weight: bold;
+            }
+            /* 設定導覽列的導覽項目文字之顏色(藍色)、大小(18px)與粗體 */
+            .navbar li a {
+                color: #0000ff !important;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        /* 設定導覽列的在滑鼠移到導覽項目上面時，其文字顏色(#f4511e)及背景顏色(白色#fff) */
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #f4511e !important;
+            background-color: #fff !important;
+        }
+        /* 設定導覽列縮小圖案(3條水平線)之邊界顏色(透明)及顏色(白色) */
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+    </style>
+</head>
+<body style="font-family:標楷體">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("A7233739曾鈺炘", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
+                    <li>@Html.ActionLink("單位轉換", "UnitConversion", "UnitConversion")</li>
+                    <li>@Html.ActionLink("貨幣轉換", "CurrencyExchange", "CurrencyExchange")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

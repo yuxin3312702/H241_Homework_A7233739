@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "網站首頁";
+}
+
+<div align="center">
+    <br />
+    <b class="label label-danger" style="font-size:x-large">網站首頁</b>
+    <br />
+    <h3>
+        @Html.ActionLink("單位轉換", "UnitConversion", "UnitConversion", null, new { @class = "btn btn-success btn-md" })
+        @Html.ActionLink("貨幣轉換", "CurrencyExchange", "CurrencyExchange", null, new { @class = "btn btn-success byn-md" })
+    </h3>
+</div>

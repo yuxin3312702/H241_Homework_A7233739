@@ -1,0 +1,46 @@
+﻿@model A7233739.ViewModels.UnitConversionViewModel
+@{
+    ViewBag.Title = "單位轉換";
+}
+
+    <div align="center">
+        <br/>
+        <b class="label label-danger" style="font-size:large">長度的單位轉換</b>
+        <br/>
+        @*建立長度的單位轉換表單*@
+        @using (Html.BeginForm("UnitConversion", "UnitConversion"))
+        {
+            <table>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.Num1, new { @class="label label-warning label-sm"}) @*顯示欄位名稱*@
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Num1)
+                        @Html.ValidationMessageFor(m => m.Num1, "", new { @class = "text-danger" })
+                    </td>
+                    <td>
+                        @Html.LabelFor(m => m.Cm, new { @class=""}) @*輸入欄位後方顯示單位為公分*@
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.Result, new { @class="label label-warning label-sm"})
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Result)
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" name="btnUnitConversion" value="毫米" class="btn btn-success"/>
+            <input type="submit" name="btnUnitConversion" value="公尺" class="btn btn-success"/>
+            <input type="submit" name="btnUnitConversion" value="公里" class="btn btn-success"/>
+            <input type="submit" name="btnUnitConversion" value="英吋" class="btn btn-success"/>
+            <input type="submit" name="btnUnitConversion" value="英尺" class="btn btn-success"/>
+            <input type="submit" name="btnUnitConversion" value="碼" class="btn-success"/>
+        }
+    </div>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
