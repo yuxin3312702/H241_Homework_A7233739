@@ -81,3 +81,7 @@ D:\ASP.NET\A7233739\A7233739\obj\Debug\A7233739.csproj.CoreCompileInputs.cache
 D:\ASP.NET\A7233739\A7233739\obj\Debug\A7233739.csproj.CopyComplete
 D:\ASP.NET\A7233739\A7233739\obj\Debug\A7233739.dll
 D:\ASP.NET\A7233739\A7233739\obj\Debug\A7233739.pdb
+D:\ASP.NET\A7233739\A7233739\bin\EntityFramework.dll
+D:\ASP.NET\A7233739\A7233739\bin\EntityFramework.SqlServer.dll
+D:\ASP.NET\A7233739\A7233739\bin\EntityFramework.xml
+D:\ASP.NET\A7233739\A7233739\bin\EntityFramework.SqlServer.xml
